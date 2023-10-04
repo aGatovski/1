@@ -1,0 +1,22 @@
+function solve(charOne,charTwo) 
+{
+  let text='';
+  let beginChar = charOne.charCodeAt(0);
+  let endChar = charTwo.charCodeAt(0);
+  if(beginChar<endChar)
+  {
+    for (let i = beginChar+1; i < endChar; i++) {
+     // console.log(String.fromCharCode(i));
+      text+=String.fromCharCode(i) + ' ';
+    }
+   
+  }
+  else
+  {
+    for (let i = endChar+1; i < beginChar; i++) {
+      //console.log(String.fromCharCode(i));
+      text+=String.fromCharCode(i) + ' ';
+    }
+  }
+  console.log(text);
+}
