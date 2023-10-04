@@ -1,0 +1,36 @@
+function judge(array) 
+{
+  
+  let newarr=[];
+  let c=0;
+  let highStreak=0;
+  let highArrayNum=0;
+  let finalArr= [];
+  for (let i = 0; i < array.length; i++) {
+    if(array[i]==array[i+1])
+    {
+      newarr.push(array[i]); c++;
+    }
+    else if(array[i]==array[i-1])
+    {
+      c++;
+      newarr.push(array[i]) 
+      if(c>highStreak)
+      {
+        highStreak=c;
+       highArrayNum=array[i];
+        c=0;
+      }
+      else c=0;
+    }
+    
+  }
+  for (let i = 0; i < highStreak  ; i++) {
+   finalArr.push(highArrayNum);
+    
+  }
+ 
+  console.log(finalArr.join(' '))
+}
+
+judge([2, 1, 1, 2, 3, 3, 2, 2, 2, 1])
