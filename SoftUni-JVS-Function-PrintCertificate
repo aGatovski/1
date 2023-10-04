@@ -1,0 +1,37 @@
+function printHeader()
+  {
+    console.log('~~~-   {@}   -~~~')
+    console.log('~- Certificate -~')
+    console.log(' ~~~- ~---~ -~~~ ')
+  }
+  function printFullName(arr)
+  {
+    let name = arr.join(' ');
+    console.log(name);
+  }
+  function formatGrade(grade)
+  {
+    if(grade>=5.5) console.log("Excellent " + grade)
+    else if(grade>=4.5 && grade<5.5) console.log("Very good " + grade)
+    else if(grade>=3.5 && grade<4.5) console.log("Good " + grade)
+    else if(grade>=3 && grade<3.5) console.log("Satisfactory " + grade)
+  }
+  function pass(grade) {
+    return grade >= 3;
+   }
+  function printCertificate(grade , nameArr)
+  {
+    if(pass(grade))
+    {
+    printHeader();
+    printFullName(nameArr);
+    formatGrade(grade);
+    }
+    else 
+    {
+      let msg = `${nameArr[0]} ${nameArr[1]} does not qualify`;
+    console.log(msg);
+    }
+   
+  }
+  printCertificate(2, ['Peter', 'Carter']);
