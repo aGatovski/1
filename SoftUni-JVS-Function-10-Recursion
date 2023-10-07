@@ -1,0 +1,17 @@
+
+function passwordValidation(a,b)
+{
+function getRecu(a)
+{
+  if(a==0)
+  {
+    return 1;
+  }
+  else 
+  {
+  return a*getRecu(a-1);
+  }
+}
+let s = getRecu(a)/getRecu(b);
+console.log(s.toFixed(2));
+}
